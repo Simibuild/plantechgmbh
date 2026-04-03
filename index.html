@@ -1,0 +1,1713 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Planttech GmbH – Fördertechnik & Anlageninstandhaltung Schweiz</title>
+  <meta name="description" content="Planttech GmbH – Ihr Spezialist für Fördertechnik, Staubbindung und mechanische Anlageninstandhaltung. Aktiv in der Schweiz, Deutschland und Österreich. Ausfallzeiten minimieren. Jetzt anfragen." />
+  <meta name="keywords" content="Fördertechnik Schweiz, Anlageninstandhaltung, Staubbindung Industrie, Förderbandwartung Schweiz, Schlauchwehr Reparatur, mechanische Instandhaltung, Verschleißschutz, Luftkanonen Montage, Kieswerk Wartung, Steinbruch Fördertechnik" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    /* ===== RESET & BASE ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Barlow', sans-serif;
+      color: #0d1b2a;
+      background: #ffffff;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* ===== COLORS ===== */
+    :root {
+      --blue-dark:    #0a2e5c;
+      --blue-mid:     #1a4d8a;
+      --blue-bright:  #1e6bb8;
+      --blue-light:   #e8f1fb;
+      --white:        #ffffff;
+      --gray-100:     #f4f6f9;
+      --gray-200:     #dde3ec;
+      --gray-600:     #4b5c72;
+      --gray-800:     #1c2b3a;
+      --steel:        #8fa3bb;
+    }
+
+    /* ===== TYPOGRAPHY ===== */
+    h1, h2, h3, h4 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      line-height: 1.05;
+    }
+    .label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 600;
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--blue-bright);
+    }
+
+    /* ===== LAYOUT ===== */
+    .container { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+    section { position: relative; }
+
+    /* ===== UTILITY ===== */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 14px 32px;
+      border-radius: 2px;
+      cursor: pointer;
+      border: none;
+      transition: all 0.2s ease;
+    }
+    .btn-primary {
+      background: var(--blue-bright);
+      color: #fff;
+      box-shadow: 0 4px 16px rgba(30,107,184,0.35);
+    }
+    .btn-primary:hover { background: var(--blue-dark); box-shadow: 0 6px 24px rgba(10,46,92,0.45); transform: translateY(-1px); }
+    .btn-outline {
+      background: transparent;
+      color: var(--white);
+      border: 2px solid rgba(255,255,255,0.5);
+    }
+    .btn-outline:hover { border-color: #fff; background: rgba(255,255,255,0.1); }
+    .btn-outline-dark {
+      background: transparent;
+      color: var(--blue-mid);
+      border: 2px solid var(--blue-mid);
+    }
+    .btn-outline-dark:hover { background: var(--blue-mid); color: #fff; }
+
+    /* ===== NAV ===== */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: rgba(10, 46, 92, 0.97);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 68px;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+    .logo-mark {
+      height: 44px;
+      display: flex;
+      align-items: center;
+    }
+    .logo-mark img { height: 44px; width: auto; display: block; }
+    .logo-text {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: 1.4rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #fff;
+      line-height: 1;
+    }
+    .logo-text span { color: var(--blue-bright); display: block; font-size: 0.6rem; font-weight: 500; letter-spacing: 0.25em; margin-top: 2px; }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 600;
+      font-size: 0.9rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: rgba(255,255,255,0.75);
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: #fff; }
+    .nav-cta { margin-left: 8px; }
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 8px;
+      background: none;
+      border: none;
+    }
+    .nav-hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: #fff;
+      transition: all 0.25s ease;
+    }
+    .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+    .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 68px; left: 0; right: 0;
+      background: var(--blue-dark);
+      padding: 24px;
+      z-index: 99;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      flex-direction: column;
+      gap: 4px;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 600;
+      font-size: 1.2rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: rgba(255,255,255,0.8);
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+      transition: color 0.2s;
+    }
+    .mobile-menu a:last-child { border-bottom: none; }
+    .mobile-menu a.mobile-cta {
+      color: var(--blue-bright);
+      margin-top: 8px;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      min-height: 100vh;
+      background:
+        linear-gradient(to bottom, rgba(10,46,92,0.88) 0%, rgba(10,46,92,0.75) 50%, rgba(10,46,92,0.92) 100%),
+        url('https://primary.jwwb.nl/public/h/u/t/temp-beoiuefhtehvzpxazofg/img_3499-high-gnhf49.jpg') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      padding-top: 68px;
+    }
+    /* Steel grid overlay */
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(30,107,184,0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(30,107,184,0.06) 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none;
+    }
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      padding: 80px 0 100px;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(30,107,184,0.2);
+      border: 1px solid rgba(30,107,184,0.4);
+      border-radius: 2px;
+      padding: 6px 14px;
+      margin-bottom: 28px;
+    }
+    .hero-badge span {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 600;
+      font-size: 0.78rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.85);
+    }
+    .hero-badge-dot {
+      width: 6px;
+      height: 6px;
+      background: #4caf50;
+      border-radius: 50%;
+      box-shadow: 0 0 6px #4caf50;
+    }
+    .hero h1 {
+      font-size: clamp(3rem, 7vw, 6rem);
+      color: #fff;
+      max-width: 820px;
+      margin-bottom: 24px;
+    }
+    .hero h1 em {
+      font-style: normal;
+      color: var(--blue-bright);
+      position: relative;
+    }
+    .hero-sub {
+      font-size: 1.15rem;
+      color: rgba(255,255,255,0.72);
+      max-width: 560px;
+      margin-bottom: 40px;
+      line-height: 1.7;
+      font-weight: 300;
+    }
+    .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 64px; }
+    .hero-stats {
+      display: flex;
+      gap: 48px;
+      border-top: 1px solid rgba(255,255,255,0.12);
+      padding-top: 40px;
+    }
+    .hero-stat {}
+    .hero-stat-num {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 2.4rem;
+      font-weight: 800;
+      color: #fff;
+      line-height: 1;
+    }
+    .hero-stat-num span { color: var(--blue-bright); }
+    .hero-stat-label {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.55);
+      letter-spacing: 0.05em;
+      margin-top: 4px;
+    }
+
+    /* ===== PROBLEM BAND ===== */
+    .problem-band {
+      background: var(--blue-dark);
+      padding: 20px 0;
+      overflow: hidden;
+    }
+    .ticker {
+      display: flex;
+      gap: 48px;
+      animation: ticker 30s linear infinite;
+      white-space: nowrap;
+    }
+    .ticker-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 600;
+      font-size: 0.9rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.6);
+    }
+    .ticker-item svg { color: var(--blue-bright); flex-shrink: 0; }
+    @keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+    /* ===== PAIN SECTION ===== */
+    .pain {
+      padding: 100px 0;
+      background: var(--gray-100);
+    }
+    .pain-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .pain-text .label { margin-bottom: 16px; }
+    .pain-text h2 {
+      font-size: clamp(2.2rem, 4vw, 3.4rem);
+      color: var(--blue-dark);
+      margin-bottom: 20px;
+    }
+    .pain-text p {
+      color: var(--gray-600);
+      font-size: 1rem;
+      line-height: 1.8;
+      margin-bottom: 32px;
+    }
+    .pain-cards { display: flex; flex-direction: column; gap: 16px; }
+    .pain-card {
+      background: #fff;
+      border: 1px solid var(--gray-200);
+      border-left: 4px solid var(--blue-bright);
+      padding: 20px 24px;
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+    .pain-card-icon {
+      width: 40px;
+      height: 40px;
+      background: var(--blue-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      border-radius: 2px;
+    }
+    .pain-card-icon svg { color: var(--blue-bright); width: 20px; height: 20px; }
+    .pain-card-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 1.05rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--blue-dark);
+      margin-bottom: 4px;
+    }
+    .pain-card p { font-size: 0.88rem; color: var(--gray-600); margin: 0; line-height: 1.5; }
+
+    /* ===== SERVICES ===== */
+    .services {
+      padding: 100px 0;
+      background: #fff;
+    }
+    .section-header { text-align: center; margin-bottom: 64px; }
+    .section-header .label { margin-bottom: 12px; }
+    .section-header h2 {
+      font-size: clamp(2.2rem, 4vw, 3.6rem);
+      color: var(--blue-dark);
+      margin-bottom: 16px;
+    }
+    .section-header p {
+      font-size: 1rem;
+      color: var(--gray-600);
+      max-width: 560px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      background: var(--gray-200);
+      border: 2px solid var(--gray-200);
+    }
+    .service-card {
+      background: #fff;
+      padding: 40px 32px;
+      position: relative;
+      transition: all 0.25s ease;
+      cursor: default;
+    }
+    .service-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--blue-bright);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s ease;
+    }
+    .service-card:hover { background: var(--blue-dark); }
+    .service-card:hover::after { transform: scaleX(1); }
+    .service-card:hover .service-icon { background: rgba(255,255,255,0.1); }
+    .service-card:hover .service-icon svg { color: #fff; }
+    .service-card:hover h3 { color: #fff; }
+    .service-card:hover p { color: rgba(255,255,255,0.65); }
+    .service-card:hover .service-list li { color: rgba(255,255,255,0.6); }
+    .service-card:hover .service-list li::before { background: var(--blue-bright); }
+    .service-icon {
+      width: 56px;
+      height: 56px;
+      background: var(--blue-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+      clip-path: polygon(0 0, 85% 0, 100% 15%, 100% 100%, 15% 100%, 0 85%);
+      transition: background 0.25s;
+    }
+    .service-icon svg { width: 26px; height: 26px; color: var(--blue-bright); transition: color 0.25s; }
+    .service-card h3 {
+      font-size: 1.5rem;
+      color: var(--blue-dark);
+      margin-bottom: 12px;
+      transition: color 0.25s;
+    }
+    .service-card p {
+      font-size: 0.9rem;
+      color: var(--gray-600);
+      line-height: 1.7;
+      margin-bottom: 20px;
+      transition: color 0.25s;
+    }
+    .service-list { list-style: none; }
+    .service-list li {
+      font-size: 0.85rem;
+      color: var(--gray-600);
+      padding: 5px 0;
+      padding-left: 16px;
+      position: relative;
+      transition: color 0.25s;
+    }
+    .service-list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 14px;
+      width: 6px;
+      height: 2px;
+      background: var(--blue-bright);
+      transition: background 0.25s;
+    }
+
+    /* ===== WHY US ===== */
+    .why {
+      padding: 100px 0;
+      background: var(--blue-dark);
+      position: relative;
+      overflow: hidden;
+    }
+    .why::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+    .why .section-header h2 { color: #fff; }
+    .why .section-header p { color: rgba(255,255,255,0.55); }
+    .why .label { color: rgba(255,255,255,0.5); }
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2px;
+      background: rgba(255,255,255,0.06);
+      position: relative;
+      z-index: 1;
+    }
+    .why-item {
+      padding: 40px 28px;
+      background: rgba(10,46,92,0.8);
+      text-align: center;
+      position: relative;
+    }
+    .why-item::before {
+      content: attr(data-number);
+      position: absolute;
+      top: 16px;
+      right: 20px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: 3rem;
+      color: rgba(255,255,255,0.04);
+      line-height: 1;
+    }
+    .why-icon {
+      width: 60px;
+      height: 60px;
+      background: rgba(30,107,184,0.2);
+      border: 1px solid rgba(30,107,184,0.35);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      border-radius: 2px;
+    }
+    .why-icon svg { width: 28px; height: 28px; color: var(--blue-bright); }
+    .why-item h4 {
+      font-size: 1.1rem;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+    .why-item p {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.6;
+    }
+
+    /* ===== PROCESS ===== */
+    .process {
+      padding: 100px 0;
+      background: var(--gray-100);
+    }
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      position: relative;
+    }
+    .process-steps::before {
+      content: '';
+      position: absolute;
+      top: 36px;
+      left: 12.5%;
+      right: 12.5%;
+      height: 2px;
+      background: var(--gray-200);
+      z-index: 0;
+    }
+    .process-step { text-align: center; padding: 0 20px; position: relative; z-index: 1; }
+    .step-num {
+      width: 72px;
+      height: 72px;
+      background: var(--blue-dark);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: 1.8rem;
+      clip-path: polygon(0 0, 80% 0, 100% 20%, 100% 100%, 20% 100%, 0 80%);
+    }
+    .process-step h4 {
+      font-size: 1.05rem;
+      color: var(--blue-dark);
+      margin-bottom: 10px;
+    }
+    .process-step p {
+      font-size: 0.85rem;
+      color: var(--gray-600);
+      line-height: 1.6;
+    }
+
+    /* ===== INDUSTRIES ===== */
+    .industries {
+      padding: 80px 0;
+      background: #fff;
+      border-top: 1px solid var(--gray-200);
+    }
+    .industries-row {
+      display: flex;
+      align-items: center;
+      gap: 48px;
+    }
+    .industries-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 0.8rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--steel);
+      white-space: nowrap;
+    }
+    .industries-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      flex: 1;
+    }
+    .industry-tag {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--blue-light);
+      border: 1px solid var(--gray-200);
+      padding: 8px 16px;
+      border-radius: 2px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 600;
+      font-size: 0.85rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--blue-dark);
+    }
+    .industry-tag svg { width: 14px; height: 14px; color: var(--blue-bright); }
+
+    /* ===== ABOUT ===== */
+    .about {
+      padding: 100px 0;
+      background: #fff;
+    }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .about-visual {
+      position: relative;
+    }
+    .about-img-frame {
+      background: var(--blue-dark);
+      padding: 4px;
+      clip-path: polygon(0 0, 92% 0, 100% 8%, 100% 100%, 8% 100%, 0 92%);
+    }
+    .about-img-inner {
+      width: 100%;
+      height: 420px;
+      background:
+        linear-gradient(to bottom right, rgba(10,46,92,0.25), rgba(10,46,92,0.05)),
+        url('https://primary.jwwb.nl/public/h/u/t/temp-beoiuefhtehvzpxazofg/img_3808-high.jpg?enable-io=true&enable=upscale&crop=1%3A1&width=800') center/cover;
+      clip-path: polygon(0 0, 92% 0, 100% 8%, 100% 100%, 8% 100%, 0 92%);
+    }
+    .about-badge {
+      position: absolute;
+      bottom: -20px;
+      right: -20px;
+      background: var(--blue-bright);
+      color: #fff;
+      padding: 20px 28px;
+      text-align: center;
+      clip-path: polygon(0 0, 88% 0, 100% 12%, 100% 100%, 12% 100%, 0 88%);
+    }
+    .about-badge-num {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: 2.2rem;
+      line-height: 1;
+    }
+    .about-badge-txt {
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      opacity: 0.85;
+    }
+    .about-content .label { margin-bottom: 16px; }
+    .about-content h2 {
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      color: var(--blue-dark);
+      margin-bottom: 20px;
+    }
+    .about-content p {
+      font-size: 0.95rem;
+      color: var(--gray-600);
+      line-height: 1.8;
+      margin-bottom: 16px;
+    }
+    .team-list {
+      margin-top: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .team-member {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 14px 18px;
+      background: var(--gray-100);
+      border-left: 3px solid var(--blue-bright);
+    }
+    .team-avatar {
+      width: 52px;
+      height: 52px;
+      background: var(--blue-mid);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      border-radius: 1px;
+      flex-shrink: 0;
+      overflow: hidden;
+    }
+    .team-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+    }
+    .team-member-name {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--blue-dark);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .team-member-role {
+      font-size: 0.8rem;
+      color: var(--gray-600);
+    }
+
+    /* ===== CTA / FORM ===== */
+    .cta-section {
+      padding: 100px 0;
+      background:
+        linear-gradient(135deg, rgba(10,46,92,0.95) 0%, rgba(26,77,138,0.95) 100%),
+        url('https://primary.jwwb.nl/public/h/u/t/temp-beoiuefhtehvzpxazofg/img_2904-high-7p9rar.jpg') center/cover;
+      position: relative;
+    }
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+    .cta-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+      position: relative;
+      z-index: 1;
+    }
+    .cta-text .label { color: rgba(255,255,255,0.5); margin-bottom: 16px; }
+    .cta-text h2 {
+      font-size: clamp(2.2rem, 4vw, 3.4rem);
+      color: #fff;
+      margin-bottom: 20px;
+    }
+    .cta-text p {
+      color: rgba(255,255,255,0.6);
+      font-size: 0.95rem;
+      line-height: 1.8;
+      margin-bottom: 32px;
+    }
+    .contact-info { display: flex; flex-direction: column; gap: 16px; margin-top: 8px; }
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .contact-item-icon {
+      width: 40px;
+      height: 40px;
+      background: rgba(30,107,184,0.25);
+      border: 1px solid rgba(30,107,184,0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+    .contact-item-icon svg { width: 18px; height: 18px; color: var(--blue-bright); }
+    .contact-item-text {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 600;
+      font-size: 1rem;
+      color: #fff;
+      letter-spacing: 0.02em;
+    }
+    .contact-item-text span { display: block; font-weight: 400; font-size: 0.78rem; color: rgba(255,255,255,0.45); letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 2px; }
+
+    /* ===== FORM ===== */
+    .form-card {
+      background: #fff;
+      padding: 40px 36px;
+      clip-path: polygon(0 0, 94% 0, 100% 6%, 100% 100%, 6% 100%, 0 94%);
+    }
+    .form-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: 1.5rem;
+      color: var(--blue-dark);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 24px;
+    }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .form-group { margin-bottom: 16px; }
+    .form-group label {
+      display: block;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 600;
+      font-size: 0.78rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--blue-dark);
+      margin-bottom: 6px;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px 14px;
+      background: var(--gray-100);
+      border: 1px solid var(--gray-200);
+      border-radius: 0;
+      font-family: 'Barlow', sans-serif;
+      font-size: 0.9rem;
+      color: var(--gray-800);
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--blue-bright);
+      background: #fff;
+    }
+    .form-group textarea { resize: vertical; min-height: 100px; }
+    .form-submit {
+      width: 100%;
+      background: var(--blue-bright);
+      color: #fff;
+      border: none;
+      padding: 16px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 1.05rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 8px;
+    }
+    .form-submit:hover { background: var(--blue-dark); }
+    .form-note {
+      text-align: center;
+      font-size: 0.75rem;
+      color: var(--gray-600);
+      margin-top: 12px;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: var(--gray-800);
+      padding: 48px 0 28px;
+    }
+    .footer-inner {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 40px;
+    }
+    .footer-brand .logo { margin-bottom: 16px; }
+    .footer-brand p {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.4);
+      line-height: 1.7;
+      max-width: 300px;
+    }
+    .footer-col h5 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 0.8rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+      margin-bottom: 16px;
+    }
+    .footer-links { list-style: none; }
+    .footer-links li { margin-bottom: 8px; }
+    .footer-links a {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.55);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: #fff; }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .footer-bottom p {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.3);
+    }
+    .footer-bottom a {
+      color: rgba(255,255,255,0.3);
+      text-decoration: none;
+    }
+    .footer-bottom a:hover { color: rgba(255,255,255,0.6); }
+    .swiss-badge {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.3);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    .swiss-flag {
+      width: 18px;
+      height: 18px;
+      background: #e00;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+    }
+
+    /* ===== SCROLL INDICATOR ===== */
+    .scroll-progress {
+      position: fixed;
+      top: 68px;
+      left: 0;
+      height: 3px;
+      background: var(--blue-bright);
+      z-index: 99;
+      transition: width 0.1s;
+    }
+
+    /* ===== ANIMATIONS ===== */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .fade-in-delay-1 { transition-delay: 0.1s; }
+    .fade-in-delay-2 { transition-delay: 0.2s; }
+    .fade-in-delay-3 { transition-delay: 0.3s; }
+    .fade-in-delay-4 { transition-delay: 0.4s; }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1024px) {
+      .services-grid { grid-template-columns: 1fr 1fr; }
+      .why-grid { grid-template-columns: repeat(2, 1fr); }
+      .process-steps { grid-template-columns: repeat(2, 1fr); gap: 32px; }
+      .process-steps::before { display: none; }
+      .about-grid { grid-template-columns: 1fr; gap: 48px; }
+      .cta-inner { grid-template-columns: 1fr; }
+      .footer-inner { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-hamburger { display: flex; }
+      .pain-grid { grid-template-columns: 1fr; }
+      .services-grid { grid-template-columns: 1fr; }
+      .why-grid { grid-template-columns: 1fr 1fr; }
+      .hero-stats { gap: 24px; flex-wrap: wrap; }
+      .hero-actions { flex-direction: column; align-items: flex-start; }
+      .form-row { grid-template-columns: 1fr; }
+      .footer-inner { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+      .industries-row { flex-direction: column; align-items: flex-start; }
+    }
+    @media (max-width: 480px) {
+      .why-grid { grid-template-columns: 1fr; }
+      .process-steps { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- SCROLL PROGRESS -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- ===== NAV ===== -->
+<nav>
+  <div class="container">
+    <div class="nav-inner">
+      <a href="#hero" class="logo" data-scroll="hero">
+        <div class="logo-mark">
+          <img src="https://primary.jwwb.nl/public/h/u/t/temp-beoiuefhtehvzpxazofg/image-high-cqkww3.png?enable-io=true&enable=upscale&height=88" alt="Planttech GmbH Logo" />
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#leistungen" data-scroll="leistungen">Leistungen</a></li>
+        <li><a href="#branchen" data-scroll="branchen">Branchen</a></li>
+        <li><a href="#ueber-uns" data-scroll="ueber-uns">Über uns</a></li>
+        <li><a href="#kontakt" data-scroll="kontakt" class="nav-cta"><span class="btn btn-primary" style="padding:10px 22px;font-size:0.85rem;">Anfrage stellen</span></a></li>
+      </ul>
+      <button class="nav-hamburger" id="hamburger" aria-label="Menü öffnen">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#leistungen" data-scroll="leistungen">Leistungen</a>
+  <a href="#branchen" data-scroll="branchen">Branchen</a>
+  <a href="#ueber-uns" data-scroll="ueber-uns">Über uns</a>
+  <a href="#kontakt" data-scroll="kontakt" class="mobile-cta">→ Anfrage stellen</a>
+</div>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="hero">
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-badge">
+        <div class="hero-badge-dot"></div>
+        <span>Ihr Spezialist aus der Schweiz — aktiv in D, A & CH</span>
+      </div>
+      <h1>Wenn Anlagen<br/>ausfallen,<br/>sind wir <em>da.</em></h1>
+      <p class="hero-sub">
+        Planttech GmbH ist Ihr Spezialist für Fördertechnik, Staubbindung und mechanische Anlageninstandhaltung — schnell, zuverlässig, direkt vor Ort. Aktiv in der Schweiz, Deutschland und Österreich.
+      </p>
+      <div class="hero-actions">
+        <a href="#kontakt" data-scroll="kontakt" class="btn btn-primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.22 1.18 2 2 0 012.22 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.16 6.16l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.9v2.02z"/></svg>
+          Anfrage stellen
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="hero-stat-num">3<span>+</span></div>
+          <div class="hero-stat-label">Kernkompetenzen</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">D<span>·A·CH</span></div>
+          <div class="hero-stat-label">Einsatzgebiet</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">100<span>%</span></div>
+          <div class="hero-stat-label">Persönlicher Service</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">24<span>/7</span></div>
+          <div class="hero-stat-label">Für Sie erreichbar</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TICKER BAND -->
+<div class="problem-band">
+  <div class="ticker">
+    <!-- First set -->
+    <div class="ticker-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg> Förderbandwartung</div>
+    <div class="ticker-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg> Staubbindung Industrie</div>
+    <div class="ticker-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg> Schlauchwehr-Service</div>
+    <div class="ticker-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg> Mechanische Instandhaltung</div>
+    <div class="ticker-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg> Verschleißschutz Montage</div>
+    <div class="ticker-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg> Luftkanonen Installation</div>
+    <div class="ticker-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg> Metallbau Schweiz</div>
+    <div class="ticker-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg> Präventive Wartung</div>
+    <!-- Duplicate for seamless loop -->
+    <div class="ticker-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg> Förderbandwartung</div>
+    <div class="ticker-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg> Staubbindung Industrie</div>
+    <div class="ticker-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg> Schlauchwehr-Service</div>
+    <div class="ticker-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg> Mechanische Instandhaltung</div>
+    <div class="ticker-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg> Verschleißschutz Montage</div>
+    <div class="ticker-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg> Luftkanonen Installation</div>
+    <div class="ticker-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg> Metallbau Schweiz</div>
+    <div class="ticker-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg> Präventive Wartung</div>
+  </div>
+</div>
+
+<!-- ===== PROBLEM SECTION ===== -->
+<section class="pain">
+  <div class="container">
+    <div class="pain-grid">
+      <div class="pain-text fade-in">
+        <div class="label">Das Problem kennen Sie</div>
+        <h2>Stillstand kostet.<br/>Jeden Tag.</h2>
+        <p>
+          Eine defekte Förderanlage, unkontrollierter Staub auf der Baustelle, eine gerissene Schlauchwehrmembran — jede Stunde ohne Lösung kostet Geld. Und der richtige Spezialist ist schwer zu finden.
+        </p>
+        <a href="#kontakt" data-scroll="kontakt" class="btn btn-outline-dark">Anfrage stellen</a>
+      </div>
+      <div class="pain-cards">
+        <div class="pain-card fade-in fade-in-delay-1">
+          <div class="pain-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square">
+              <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+            </svg>
+          </div>
+          <div>
+            <div class="pain-card-title">Ungeplante Ausfälle</div>
+            <p>Förderanlagen fallen unangekündigt aus. Ohne Wartungsplan wird jeder Ausfall zum teuren Notfall.</p>
+          </div>
+        </div>
+        <div class="pain-card fade-in fade-in-delay-2">
+          <div class="pain-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <div>
+            <div class="pain-card-title">Staubprobleme</div>
+            <p>Feinstaubbelastung gefährdet Personal, Maschinen und Umgebung — und kann zu Bussgeldern führen.</p>
+          </div>
+        </div>
+        <div class="pain-card fade-in fade-in-delay-3">
+          <div class="pain-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square">
+              <rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/>
+            </svg>
+          </div>
+          <div>
+            <div class="pain-card-title">Kein Spezialist verfügbar</div>
+            <p>Schlauchwehre, Verschleißschutz, Luftkanonen — zu speziell für generelle Servicefirmen.</p>
+          </div>
+        </div>
+        <div class="pain-card fade-in fade-in-delay-4">
+          <div class="pain-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square">
+              <line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>
+            </svg>
+          </div>
+          <div>
+            <div class="pain-card-title">Steigende Unterhaltskosten</div>
+            <p>Ohne präventive Wartung wächst der Reparaturaufwand exponentiell. Reparieren wird teurer als planen.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section class="services" id="leistungen">
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="label">Was wir für Sie tun</div>
+      <h2>Drei Kompetenzen.<br/>Eine Anlaufstelle.</h2>
+      <p>Von der Beratung bis zur Inbetriebnahme, von der Wartung bis zur Notfallreparatur — alles aus einer Hand.</p>
+    </div>
+    <div class="services-grid">
+
+      <div class="service-card fade-in">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square">
+            <rect x="2" y="7" width="20" height="14" rx="0"/><path d="M16 7V5a2 2 0 00-4 0v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/>
+          </svg>
+        </div>
+        <h3>Fördertechnik</h3>
+        <p>Wartung, Reparatur und Instandhaltung von Förderanlagen jeder Art — schnell und fachgerecht.</p>
+        <ul class="service-list">
+          <li>Förderbänder & Kettenförderer</li>
+          <li>Kratzförderer & Förderschnecken</li>
+          <li>Verschleißschutz-Montage</li>
+          <li>Luftkanonen Installation & Service</li>
+          <li>Notfall-Reparaturen</li>
+        </ul>
+      </div>
+
+      <div class="service-card fade-in fade-in-delay-1">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square">
+            <path d="M12 22C6.48 22 2 17.52 2 12S6.48 2 12 2s10 4.48 10 10-4.48 10-10 10z"/><path d="M8 12c0-2.2 1.8-4 4-4s4 1.8 4 4-1.8 4-4 4"/><line x1="12" y1="8" x2="12" y2="2"/><line x1="12" y1="22" x2="12" y2="16"/>
+          </svg>
+        </div>
+        <h3>Staubbindung</h3>
+        <p>Mobile und stationäre Staubbindungssysteme — von der Beratung bis zum laufenden Service.</p>
+        <ul class="service-list">
+          <li>Stationäre Anlagen & Nebelanlagen</li>
+          <li>Mobile Systeme für Baustellen</li>
+          <li>Kostenlose Erstberatung</li>
+          <li>Montage & Inbetriebnahme</li>
+          <li>Laufende Wartung & Reparatur</li>
+        </ul>
+      </div>
+
+      <div class="service-card fade-in fade-in-delay-2">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square">
+            <circle cx="12" cy="12" r="3"/><path d="M19.07 4.93l-1.41 1.41M5.34 18.66l-1.41 1.41M2 12h2M20 12h2M17.66 17.66l1.41 1.41M5.34 5.34L3.93 3.93"/><path d="M12 2v2M12 20v2"/>
+          </svg>
+        </div>
+        <h3>Anlageninstandhaltung</h3>
+        <p>Mechanische Instandhaltung, Schlauchwehr-Service und Metallbau — alles was Ihre Anlage am Laufen hält.</p>
+        <ul class="service-list">
+          <li>Mechanische Reparaturen</li>
+          <li>Vorbeugende Wartungsprogramme</li>
+          <li>Schlauchwehr-Membranersatz</li>
+          <li>Zustandsbeurteilungen</li>
+          <li>Metallbau & Werkstattarbeiten</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHY ===== -->
+<section class="why">
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="label">Warum Planttech</div>
+      <h2>Der Unterschied,<br/>den Sie spüren.</h2>
+      <p>Wir sind kein Grosskonzern. Wir sind Ihre direkte Anlaufstelle — mit dem Know-how grosser Anbieter und der Flexibilität eines spezialisierten Teams.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-item fade-in" data-number="01">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square">
+            <polyline points="20 6 9 17 4 12"/>
+          </svg>
+        </div>
+        <h4>Spezialist statt Generalist</h4>
+        <p>Fördertechnik, Staubbindung und Instandhaltung — das ist unser Fokus, nicht ein Anhang.</p>
+      </div>
+      <div class="why-item fade-in fade-in-delay-1" data-number="02">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/>
+          </svg>
+        </div>
+        <h4>DACH-weit mobil</h4>
+        <p>Ob Schweiz, Deutschland oder Österreich — wir kommen zu Ihnen, wo immer Ihre Anlage steht.</p>
+      </div>
+      <div class="why-item fade-in fade-in-delay-2" data-number="03">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square">
+            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/>
+          </svg>
+        </div>
+        <h4>Persönlicher Kontakt</h4>
+        <p>Sie erreichen immer Daniel Godic persönlich — kein Callcenter, kein Ticket-System.</p>
+      </div>
+      <div class="why-item fade-in fade-in-delay-3" data-number="04">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+        </div>
+        <h4>Auch nach dem Auftrag</h4>
+        <p>Wir betreuen Sie nicht nur während des Projekts — sondern auch danach. Langfristig.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROCESS ===== -->
+<section class="process">
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="label">So läuft es ab</div>
+      <h2>Einfach.<br/>Direkt. Zuverlässig.</h2>
+    </div>
+    <div class="process-steps">
+      <div class="process-step fade-in">
+        <div class="step-num">01</div>
+        <h4>Anfrage stellen</h4>
+        <p>Kontaktieren Sie uns per Formular, Telefon oder E-Mail. Kein Aufwand, keine Verpflichtung.</p>
+      </div>
+      <div class="process-step fade-in fade-in-delay-1">
+        <div class="step-num">02</div>
+        <h4>Analyse vor Ort</h4>
+        <p>Wir kommen zu Ihnen, schauen uns die Situation an und bewerten den Handlungsbedarf.</p>
+      </div>
+      <div class="process-step fade-in fade-in-delay-2">
+        <div class="step-num">03</div>
+        <h4>Klares Angebot</h4>
+        <p>Sie erhalten ein transparentes Angebot — ohne versteckte Kosten und mit realistischen Zeitrahmen.</p>
+      </div>
+      <div class="process-step fade-in fade-in-delay-3">
+        <div class="step-num">04</div>
+        <h4>Ausführung & Nachbetreuung</h4>
+        <p>Wir setzen um, dokumentieren und stehen danach weiter für Sie bereit.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== INDUSTRIES ===== -->
+<section class="industries" id="branchen">
+  <div class="container">
+    <div class="industries-row fade-in">
+      <div class="industries-label">Unsere<br/>Branchen</div>
+      <div class="industries-list">
+        <div class="industry-tag">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z"/></svg>
+          Kieswerke
+        </div>
+        <div class="industry-tag">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z"/></svg>
+          Steinbrüche
+        </div>
+        <div class="industry-tag">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z"/></svg>
+          Baustellen
+        </div>
+        <div class="industry-tag">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z"/></svg>
+          Recycling & Entsorgung
+        </div>
+        <div class="industry-tag">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z"/></svg>
+          Wasserbau
+        </div>
+        <div class="industry-tag">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z"/></svg>
+          Holzverarbeitung
+        </div>
+        <div class="industry-tag">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z"/></svg>
+          Lebensmittelproduktion
+        </div>
+        <div class="industry-tag">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z"/></svg>
+          Industrie allgemein
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section class="about" id="ueber-uns">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-visual fade-in">
+        <div class="about-img-frame">
+          <div class="about-img-inner"></div>
+        </div>
+        <div class="about-badge">
+          <div class="about-badge-num">100%</div>
+          <div class="about-badge-txt">Schweizer<br/>Qualität</div>
+        </div>
+      </div>
+      <div class="about-content fade-in fade-in-delay-1">
+        <div class="label">Wer wir sind</div>
+        <h2>Klein genug<br/>für Sie persönlich.<br/>Stark genug<br/>für grosse Projekte.</h2>
+        <p>
+          Planttech GmbH wurde von Daniel Godic in Sarnen gegründet — mit dem klaren Ziel, Industriebetrieben in der Schweiz einen verlässlichen Spezialisten für Fördertechnik, Staubbindung und Anlageninstandhaltung zu bieten.
+        </p>
+        <p>
+          Was als Einzelfirma begann, ist heute ein schlagkräftiges Team, das auch bei komplexen und grossen Projekten liefert — termingerecht, fachkundig und mit echtem Engagement.
+        </p>
+        <div class="team-list">
+          <div class="team-member">
+            <div class="team-avatar"><img src="https://primary.jwwb.nl/public/h/u/t/temp-beoiuefhtehvzpxazofg/img_3808-high.jpg?enable-io=true&enable=upscale&crop=1%3A1&width=200" alt="Daniel Godic" /></div>
+            <div>
+              <div class="team-member-name">Daniel Godic</div>
+              <div class="team-member-role">Inhaber & Servicetechniker</div>
+            </div>
+          </div>
+          <div class="team-member">
+            <div class="team-avatar"><img src="https://primary.jwwb.nl/public/h/u/t/temp-beoiuefhtehvzpxazofg/pasted-image-sun-feb-15-2026-12-25-55-gmt-0100-mitteleurop-ische-normalzeit-high.png?enable-io=true&enable=upscale&crop=1%3A1&width=200" alt="Thomas Schelbli" /></div>
+            <div>
+              <div class="team-member-name">Thomas Schelbli</div>
+              <div class="team-member-role">Servicetechniker & Supervisor</div>
+            </div>
+          </div>
+          <div class="team-member">
+            <div class="team-avatar"><img src="https://primary.jwwb.nl/pexels/81/8191968.jpeg?enable-io=true&enable=upscale&crop=1%3A1&width=200" alt="Monika Godic-Bürke" /></div>
+            <div>
+              <div class="team-member-name">Monika Godic-Bürke</div>
+              <div class="team-member-role">Administration</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA / FORM ===== -->
+<section class="cta-section" id="kontakt">
+  <div class="container">
+    <div class="cta-inner">
+      <div class="cta-text fade-in">
+        <div class="label">Kontakt aufnehmen</div>
+        <h2>Bereit, wenn<br/>Ihre Anlage es<br/>nicht mehr ist.</h2>
+        <p>
+          Senden Sie uns Ihre Anfrage — unverbindlich und ohne langen Papierkram. Wir melden uns schnell und persönlich bei Ihnen.
+        </p>
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-item-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square">
+                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.22 1.18 2 2 0 012.22 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.16 6.16l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.9v2.02z"/>
+              </svg>
+            </div>
+            <div class="contact-item-text">
+              <span>Telefon</span>
+              +41 79 212 01 01
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+              </svg>
+            </div>
+            <div class="contact-item-text">
+              <span>E-Mail</span>
+              info@planttech.ch
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/>
+              </svg>
+            </div>
+            <div class="contact-item-text">
+              <span>Standort</span>
+              Waagstrasse 3a, 6060 Sarnen
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="fade-in fade-in-delay-1">
+        <div class="form-card">
+          <div class="form-title">Unverbindliche Anfrage</div>
+          <form id="contactForm" action="https://formspree.io/f/mlgoprba" method="POST">
+            <!-- Formspree: Antwort-E-Mail des Absenders -->
+            <input type="hidden" name="_replyto" value="" id="replytoField" />
+            <div class="form-row">
+              <div class="form-group">
+                <label>Vorname</label>
+                <input type="text" name="vorname" placeholder="Max" required />
+              </div>
+              <div class="form-group">
+                <label>Nachname</label>
+                <input type="text" name="nachname" placeholder="Muster" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Firma</label>
+              <input type="text" name="firma" placeholder="Musterbau AG" />
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Telefon</label>
+                <input type="tel" name="telefon" placeholder="+41 ..." />
+              </div>
+              <div class="form-group">
+                <label>E-Mail</label>
+                <input type="email" name="email" id="emailField" placeholder="name@firma.ch" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Thema</label>
+              <select name="thema">
+                <option value="">Bitte wählen...</option>
+                <option>Fördertechnik — Wartung / Reparatur</option>
+                <option>Staubbindung — Beratung / Anlage</option>
+                <option>Anlageninstandhaltung</option>
+                <option>Schlauchwehr-Service</option>
+                <option>Sonstiges</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Ihre Nachricht</label>
+              <textarea name="nachricht" placeholder="Beschreiben Sie kurz Ihr Anliegen oder die betroffene Anlage..."></textarea>
+            </div>
+            <button type="submit" class="form-submit" id="submitBtn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              Anfrage senden
+            </button>
+            <p class="form-note">Kostenlos & unverbindlich — wir melden uns innerhalb 24h</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="#hero" data-scroll="hero" style="margin-bottom:16px;display:inline-flex;">
+          <img src="https://primary.jwwb.nl/public/h/u/t/temp-beoiuefhtehvzpxazofg/image-high-cqkww3.png?enable-io=true&enable=upscale&height=88" alt="Planttech GmbH Logo" style="height:48px;width:auto;display:block;filter:brightness(0) invert(1);" />
+        </a>
+        <p>Spezialist für Fördertechnik, Staubbindung und mechanische Anlageninstandhaltung in der ganzen Schweiz.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Leistungen</h5>
+        <ul class="footer-links">
+          <li><a href="#leistungen">Fördertechnik</a></li>
+          <li><a href="#leistungen">Staubbindung</a></li>
+          <li><a href="#leistungen">Anlageninstandhaltung</a></li>
+          <li><a href="#leistungen">Schlauchwehr-Service</a></li>
+          <li><a href="#leistungen">Metallbau</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Kontakt</h5>
+        <ul class="footer-links">
+          <li><a href="tel:+41792120101">+41 79 212 01 01</a></li>
+          <li><a href="mailto:info@planttech.ch">info@planttech.ch</a></li>
+          <li><a href="#kontakt">Waagstrasse 3a</a></li>
+          <li><a href="#kontakt">6060 Sarnen</a></li>
+          <li><a href="https://www.planttech.ch" target="_blank" rel="noopener">www.planttech.ch</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Planttech GmbH · Sarnen · UID 229.558.287</p>
+      <div style="display:flex;align-items:center;gap:24px;">
+        <a href="javascript:void(0)" onclick="openModal('impressum')" style="font-size:0.78rem;color:rgba(255,255,255,0.4);text-decoration:none;">Impressum</a>
+        <a href="javascript:void(0)" onclick="openModal('datenschutz')" style="font-size:0.78rem;color:rgba(255,255,255,0.4);text-decoration:none;">Datenschutz</a>
+        <div class="swiss-badge">
+          <div class="swiss-flag">✚</div>
+          Made in Switzerland
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== MODALS ===== -->
+<div id="modal-impressum" style="display:none;position:fixed;inset:0;z-index:200;background:rgba(10,46,92,0.85);backdrop-filter:blur(6px);overflow-y:auto;padding:40px 20px;">
+  <div style="max-width:680px;margin:0 auto;background:#fff;padding:48px;position:relative;">
+    <button onclick="closeModal('impressum')" style="position:absolute;top:20px;right:20px;background:none;border:none;font-size:1.5rem;cursor:pointer;color:#4b5c72;">✕</button>
+    <div style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.8rem;text-transform:uppercase;color:#0a2e5c;margin-bottom:24px;">Impressum</div>
+    <p style="font-size:0.9rem;color:#4b5c72;line-height:1.8;margin-bottom:12px;"><strong style="color:#0a2e5c;">Planttech GmbH</strong></p>
+    <p style="font-size:0.9rem;color:#4b5c72;line-height:1.8;margin-bottom:4px;">Waagstrasse 3a</p>
+    <p style="font-size:0.9rem;color:#4b5c72;line-height:1.8;margin-bottom:4px;">6060 Sarnen, Schweiz</p>
+    <p style="font-size:0.9rem;color:#4b5c72;line-height:1.8;margin-bottom:20px;">UID: CHE-229.558.287</p>
+    <p style="font-size:0.9rem;color:#4b5c72;line-height:1.8;margin-bottom:4px;"><strong style="color:#0a2e5c;">Geschäftsführer:</strong> Daniel Godic</p>
+    <p style="font-size:0.9rem;color:#4b5c72;line-height:1.8;margin-bottom:4px;"><strong style="color:#0a2e5c;">Telefon:</strong> +41 79 212 01 01</p>
+    <p style="font-size:0.9rem;color:#4b5c72;line-height:1.8;margin-bottom:20px;"><strong style="color:#0a2e5c;">E-Mail:</strong> info@planttech.ch</p>
+    <p style="font-size:0.9rem;color:#4b5c72;line-height:1.8;"><strong style="color:#0a2e5c;">Haftungsausschluss:</strong> Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschliesslich deren Betreiber verantwortlich.</p>
+  </div>
+</div>
+
+<div id="modal-datenschutz" style="display:none;position:fixed;inset:0;z-index:200;background:rgba(10,46,92,0.85);backdrop-filter:blur(6px);overflow-y:auto;padding:40px 20px;">
+  <div style="max-width:680px;margin:0 auto;background:#fff;padding:48px;position:relative;">
+    <button onclick="closeModal('datenschutz')" style="position:absolute;top:20px;right:20px;background:none;border:none;font-size:1.5rem;cursor:pointer;color:#4b5c72;">✕</button>
+    <div style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.8rem;text-transform:uppercase;color:#0a2e5c;margin-bottom:24px;">Datenschutzerklärung</div>
+    <p style="font-size:0.9rem;color:#4b5c72;line-height:1.8;margin-bottom:16px;"><strong style="color:#0a2e5c;">Verantwortliche Stelle:</strong> Planttech GmbH, Waagstrasse 3a, 6060 Sarnen</p>
+    <p style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1rem;text-transform:uppercase;color:#0a2e5c;margin-bottom:8px;">Erhebung von Daten</p>
+    <p style="font-size:0.9rem;color:#4b5c72;line-height:1.8;margin-bottom:16px;">Beim Besuch dieser Website werden keine personenbezogenen Daten automatisch gespeichert. Beim Absenden des Kontaktformulars werden Ihre Angaben (Name, E-Mail, Telefon, Nachricht) ausschliesslich zur Bearbeitung Ihrer Anfrage verwendet.</p>
+    <p style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1rem;text-transform:uppercase;color:#0a2e5c;margin-bottom:8px;">Weitergabe von Daten</p>
+    <p style="font-size:0.9rem;color:#4b5c72;line-height:1.8;margin-bottom:16px;">Ihre Daten werden nicht an Dritte weitergegeben und ausschliesslich intern zur Kontaktaufnahme genutzt.</p>
+    <p style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1rem;text-transform:uppercase;color:#0a2e5c;margin-bottom:8px;">Ihre Rechte</p>
+    <p style="font-size:0.9rem;color:#4b5c72;line-height:1.8;margin-bottom:16px;">Sie haben jederzeit das Recht auf Auskunft, Berichtigung oder Löschung Ihrer gespeicherten Daten. Kontaktieren Sie uns dazu unter info@planttech.ch.</p>
+    <p style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1rem;text-transform:uppercase;color:#0a2e5c;margin-bottom:8px;">Cookies</p>
+    <p style="font-size:0.9rem;color:#4b5c72;line-height:1.8;">Diese Website verwendet keine Tracking-Cookies oder externe Analysedienste.</p>
+  </div>
+</div>
+
+<!-- ===== SCRIPTS ===== -->
+<script>
+  // ── Smooth scroll (works in iframes too) ──────────────────────────────
+  function scrollToId(id) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    const navHeight = 68;
+    const top = el.getBoundingClientRect().top + window.pageYOffset - navHeight;
+    window.scrollTo({ top: top, behavior: 'smooth' });
+  }
+
+  // Intercept ALL data-scroll links
+  document.addEventListener('click', function(e) {
+    const link = e.target.closest('[data-scroll]');
+    if (!link) return;
+    e.preventDefault();
+    const id = link.getAttribute('data-scroll');
+    scrollToId(id);
+    // close mobile menu if open
+    hamburger.classList.remove('open');
+    mobileMenu.classList.remove('open');
+  });
+
+  // ── Scroll progress bar ───────────────────────────────────────────────
+  const progressBar = document.getElementById('scrollProgress');
+  window.addEventListener('scroll', () => {
+    const scrollTop = window.pageYOffset;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    progressBar.style.width = (scrollTop / docHeight * 100) + '%';
+  });
+
+  // ── Fade-in on scroll ─────────────────────────────────────────────────
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  // ── Active nav highlight ──────────────────────────────────────────────
+  const navLinks = document.querySelectorAll('.nav-links a[data-scroll]');
+  const sections = document.querySelectorAll('section[id]');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(s => {
+      if (window.pageYOffset >= s.offsetTop - 140) current = s.id;
+    });
+    navLinks.forEach(link => {
+      link.style.color = link.getAttribute('data-scroll') === current
+        ? '#fff' : 'rgba(255,255,255,0.75)';
+    });
+  });
+
+  // ── Mobile hamburger ──────────────────────────────────────────────────
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    mobileMenu.classList.toggle('open');
+  });
+
+  // ── Modal open/close ──────────────────────────────────────────────────
+  function openModal(name) {
+    document.getElementById('modal-' + name).style.display = 'block';
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal(name) {
+    document.getElementById('modal-' + name).style.display = 'none';
+    document.body.style.overflow = '';
+  }
+  // Close modal on backdrop click
+  document.querySelectorAll('[id^="modal-"]').forEach(modal => {
+    modal.addEventListener('click', function(e) {
+      if (e.target === this) closeModal(this.id.replace('modal-', ''));
+    });
+  });
+  // Close modal on Escape
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('[id^="modal-"]').forEach(m => {
+        m.style.display = 'none';
+      });
+      document.body.style.overflow = '';
+    }
+  });
+
+  // ── _replyto mit E-Mail-Feld synchronisieren ──────────────────────────
+  const emailField = document.getElementById('emailField');
+  const replytoField = document.getElementById('replytoField');
+  if (emailField) {
+    emailField.addEventListener('input', () => {
+      replytoField.value = emailField.value;
+    });
+  }
+
+  // ── Form submit via AJAX (Nutzer bleibt auf der Seite) ────────────────
+  const contactForm = document.getElementById('contactForm');
+  const submitBtn = document.getElementById('submitBtn');
+  contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    replytoField.value = emailField.value;
+
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10" stroke-dasharray="32" stroke-dashoffset="32"><animate attributeName="stroke-dashoffset" values="32;0" dur="0.8s" repeatCount="indefinite"/></circle></svg> Wird gesendet…';
+
+    try {
+      const res = await fetch(contactForm.action, {
+        method: 'POST',
+        body: new FormData(contactForm),
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (res.ok) {
+        contactForm.innerHTML = `
+          <div style="text-align:center;padding:40px 0;">
+            <div style="width:64px;height:64px;background:#e8f5e9;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-size:1.8rem;">✓</div>
+            <div style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.4rem;text-transform:uppercase;color:#0a2e5c;margin-bottom:10px;">Anfrage gesendet!</div>
+            <p style="font-size:0.9rem;color:#4b5c72;line-height:1.7;">Vielen Dank — wir melden uns innerhalb von 24 Stunden bei Ihnen.</p>
+          </div>`;
+      } else {
+        throw new Error('Fehler beim Senden');
+      }
+    } catch (err) {
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg> Anfrage senden';
+      const note = contactForm.querySelector('.form-note');
+      if (note) note.textContent = '⚠ Fehler beim Senden — bitte direkt an info@planttech.ch schreiben.';
+    }
+  });
+</script>
+
+</body>
+</html>
